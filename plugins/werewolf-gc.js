@@ -488,6 +488,6 @@ const handler = async (m, {
     }
 }
 handler.help = ['ww'];
-handler.tags = ['rpg'];
+handler.tags = ['game'];
 handler.command = ['ww'];
 export default handler;

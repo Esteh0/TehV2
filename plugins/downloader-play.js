@@ -38,7 +38,7 @@ mimetype: 'audio/mp4', fileName: `${title}`, contextInfo: { externalAdReply: { s
 mediaType:  2,
 mediaUrl: url,
 title: title,
-body: "© VynaaMD 0.9",
+body: "€ ʙᴏᴛ sɪx 𝟶.𝟸",
 sourceUrl: url,
 thumbnail: await(await conn.getFile(thumbnail)).data                                                                     
                                                                                                                  }
@@ -51,7 +51,7 @@ handler.tags = ['downloader']
 handler.command = /^play$/i
 
 handler.exp = 0
-handler.limit = 5
+handler.register = true
 export default handler
 
 function pickRandom(list) {

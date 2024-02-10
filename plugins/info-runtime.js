@@ -32,7 +32,7 @@ let handler = async (m, { conn, args, command }) => {
        let tag = `@${m.sender.replace(/@.+/, '')}`
   let mentionedJid = [m.sender]
     
- conn.sendButton(m.chat, `Aktif Selama\n` + muptime, wm, ehee, [['\nKakek Gw Suguono', 'huuu']], m)
+ conn.sendMessage(m.chat, `Aktif Selama\n` + muptime, wm, ehee, m)
 }
 handler.help = ['runtime']
 handler.tags = ['info']

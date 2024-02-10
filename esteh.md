@@ -1,0 +1,1 @@
+cara start bot pencet tombol hijau kalau on tombol nya jadi warna abu abu

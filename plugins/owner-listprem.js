@@ -9,7 +9,8 @@ let handler = async (m, { conn, args }) => {
   let waktu = clockString(`${premTime - new Date() * 1} `)
   let sortedP = user.map(toNumber('premiumTime')).sort(sort('premiumTime'))
   let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 10)) : Math.min(10, sortedP.length)
-  await conn.sendButton(m.chat, `${htki} *PREMIUM* ${htka}
+  let text = `*🌟 premium user 🌟*\n\nTotal: ${user.length}`
+  for (let i = 0; i < len; i++)
 ┌✦ *My Premium Time:*
 ┊• *Name:* ${conn.getName(m.sender)}
 ${prem ? `${clockString ('premiumTime' - new Date() * 1)}` : '┊• *PremiumTime:* Expired 🚫'}
@@ -17,7 +18,9 @@ ${prem ? `${clockString ('premiumTime' - new Date() * 1)}` : '┊• *PremiumTim
 
 •·–––––––––––––––––––––·•
 ${sortedP.slice(0, len).map(({ jid, name, premiumTime, registered }, i) => `\n\n┌✦ ${registered ? name : conn.getName(jid)}\n┊• wa.me/${jid.split`@`[0]}\n${premiumTime > 0 ? `${clockString (premiumTime - new Date() * 1)}` : '┊ *EXPIRED 🚫*'}`).join`\n┗━═┅═━––––––๑`}
-┗━═┅═━––––––๑`.trim(), wm, null, [[`${prem ? 'Owner': 'Buy Premium'}`, `${prem ? '.owner nomor': '.sewa'}`]], fkon)
+┗━═┅═━––––––๑`
+  conn.sendMessage
+  
 setTimeout(() => {
     if (db.data.chats[m.chat].deletemedia) conn.deleteMessage(m.chat, key)
   }, db.data.chats[m.chat].deletemediaTime)

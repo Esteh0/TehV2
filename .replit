@@ -1,5 +1,7 @@
 hidden = [".config", "package-lock.json"]
-run = "npm start"
+run = "pm2 link h40ev32ree4l2u9 6fkf5lr2vgsk9eg && pm2 start index.js && pm2 install pm2-server-monit && pm2 save && pm2 logs"
+entrypoint = "index.js"
+modules = ["nodejs-20:v8-20230920-bd784b9"]
 
 [[hints]]
 regex = "Error \\[ERR_REQUIRE_ESM\\]"
@@ -81,3 +83,7 @@ start = "typescript-language-server --stdio"
 run = ["sh", "-c", "npm start"]
 deploymentTarget = "cloudrun"
 ignorePorts = false
+
+[[ports]]
+localPort = 8080
+externalPort = 80

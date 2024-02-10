@@ -41,18 +41,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     try {
     	let id = + new Date
         let txt = `Hai Kak @${data.jid.split('@')[0]}, Kamu Menerima Pesan Dari: *Ownerku*\nPesan: \n${pesan}`.trim();
-        await conn.sendButton(data.jid, txt, wm, null, [[' ']])
-        .then(() => {
-            conn.ownreply[id] = {
-                id,
-                dari: m.sender,
-                nama: name,
-                penerima: data.jid,
-                pesan: pesan,
-                status: false
-            }
-            return !0
-        })
+        await conn.sendMessage(data.jid, txt, MessageType.text,)
+        let mf = { id, from: m.sender, to: data.jid, text: pesan, status: true}
+      
     } catch (e) {
         console.log(e)
         m.reply('Berhasil Mengirim Pesan.');

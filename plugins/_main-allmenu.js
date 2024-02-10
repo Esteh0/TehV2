@@ -9,7 +9,10 @@ const { generateWAMessageFromContent, proto } = (await import('@adiwajshing/bail
 
 const defaultMenu = {
   before: `
+❏ *Note:* Login pake akun google kalian kalau gk paham chat owner, bot ini blum sepenuh nya on 24 jam
+❏ *Web Start Bot:* https://replit.com/join/xmafmqdncd-tehangetesteh90
 ❏ *Nama Bot:* %me
+❏ *Owner Bot:* 6281359053674
 ❏ *Mode:* %mode
 ❏ *Prefix:* [ *%_p* ]
 ︎❏ *Baileys:* Multi Device
@@ -34,16 +37,25 @@ let tags = {
   'kerang': 'Kerang Ajaib',
   'quotes': 'Quotes',
   'fun': 'Fun',
+  'anime': 'Anime & Manga',
   'adminry': 'Admin',
   'group': 'Group',
+  'store': 'Store',
   'vote': 'Voting',
   'absen': 'Absen',
   'premium': 'Premium',
+  'nsfw': 'Nsfw',
   'anonymous': 'Anonymous Chat',
   'internet': 'Internet',
+  'genshin': 'Genshin',
   'news': 'News',
   'downloader': 'Downloader',
   'search': 'Searching',
+  'tools': 'Tools',
+  'primbon': 'Primbon',
+  'nulis': 'MagerNulis & Logo',
+  'audio': 'Audio Editing',
+  'maker': 'Maker',
   'database': 'Database',
   'quran': 'Al Quran',
   'owner': 'Owner', 
@@ -195,7 +207,7 @@ let tags = {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
   
- let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+ let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '6281359053674@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
  let menunya = 'https://ik.imagekit.io/lui/2024-01-06_04_02_55__0000_UTC'
  
  conn.reply(m.chat, text, fkon, { contextInfo: { mentionedJid: [m.sender],

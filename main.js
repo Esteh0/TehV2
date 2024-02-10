@@ -159,7 +159,7 @@ async function connectionUpdate(update) {
   }
   if (global.db.data == null) await loadDatabase()
   console.log(JSON.stringify(update, null, 4))
-  if (update.receivedPendingNotifications) conn.sendMessage(`6281359053674@s.whatsapp.net`, {text: 'Sukses Tersambung\n\nScript Ini Di Tulis Ulang Oleh Raiden ft Novi\nWhatsapp : wa.me/6287861831693' })
+  if (update.receivedPendingNotifications) conn.sendMessage('120363218986141237@g.us', { text: 'Bot Online'})
 }
 
 

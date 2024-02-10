@@ -106,6 +106,6 @@ const handler = async (m, {
     }
 }
 handler.help = ['wwpc'];
-handler.tags = ['rpg'];
+handler.tags = ['game'];
 handler.command = ['wwpc'];
 export default handler;
